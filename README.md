@@ -20,21 +20,21 @@ To meet the Udacity requirement  for this project; after analise the page  I did
 
 ### Part 2  Obtimize pizza.html
 
-1 Move the variables constants out of loop for  function changePizzaSizes(), used the JS API call  document.getElementsByClassName()  wich is faster, create   a local variable to save  ramdompizzacontainer. so the array's length property isn't accessed on each iteration,
-2 Move the variables constants out of loop for  function updatePositions(),create local variable cachedScrollTop, move the calculation out of loop.
-3 In document.addEventListener('DOMContentLoaded', function(),create variable var elem  outside the loop will prevent it from being created every time when the loop is executed,used document.getElementById() Web API call is faster, move the var movingPizzas = document.getElementById('movingPizzas1') outside the loop, reduce the number of pizza from 200 to 36  to fill the screen.
-4 added backface-visibility: hidden to css of .mover for  reducing the paint time.
+1. Move the variables constants out of loop for  function changePizzaSizes(), used the JS API call  document.getElementsByClassName()  wich is faster, create   a local variable to save  ramdompizzacontainer. so the array's length property isn't accessed on each iteration,
+2. Move the variables constants out of loop for  function updatePositions(),create local variable cachedScrollTop, move the calculation out of loop.
+3. In document.addEventListener('DOMContentLoaded', function(),create variable var elem  outside the loop will prevent it from being created every time when the loop is executed,used document.getElementById() Web API call is faster, move the var movingPizzas = document.getElementById('movingPizzas1') outside the loop, reduce the number of pizza from 200 to 36  to fill the screen.
+4. added backface-visibility: hidden to css of .mover for  reducing the paint time.
 
 
 
 ## Resources
 * http://kristerkari.github.io/adventures-in-webkit-land/blog/2013/08/30/fixing-a-parallax-scrolling-website-to-run-in-60-fps/
 * http://jsperf.com/udacity-optimise-loop-test/2
-*https://developers.google.com/web/tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts?hl=en
-*http://cssminifier.com/
-*https://www.udacity.com/wiki/ud884
-*http://www.webpagetest.org/result/151204_DH_NFG/
-*http://jsbeautifier.org/
+* https://developers.google.com/web/tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts?hl=en
+* http://cssminifier.com/
+* https://www.udacity.com/wiki/ud884
+* http://www.webpagetest.org/result/151204_DH_NFG/
+* http://jsbeautifier.org/
 
 
 
