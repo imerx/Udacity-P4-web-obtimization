@@ -1,17 +1,29 @@
 
-# Udacity Web optimization
+# Udacity Web optimization project #4
 
 
 ## Instalation
-Download,  unzip,  and run index.html
+Clone with Git or Download,  unzip,  and run index.html
+
 
 ## Obtimization of the page
-* change loading  js to async
-* rezize  and obtimize  images
-* css inline
-*  Move  js function out of loop
-*  Reduced the number of  pizzas showing in the screen
-* Minified Css.
+To meet the Udacity requirement  for this project; after analise the page  I did the following improvement:
+
+### Part 1  Obtimize index.html
+* Change the loading JS  to async
+* Rezize  all  images making smaller
+* Obtimize the images   pizzeria and  profilepic
+* Inline  and Minify the CSS /Style.css
+* Add Media print for print.css
+* remove google-analytics script
+
+
+### Part 2  Obtimize pizza.html
+
+1 Move the variables constants out of loop for  function changePizzaSizes(), used the JS API call  document.getElementsByClassName()  wich is faster, create   a local variable to save  ramdompizzacontainer. so the array's length property isn't accessed on each iteration,
+2 Move the variables constants out of loop for  function updatePositions(),create local variable cachedScrollTop, move the calculation out of loop.
+3 In document.addEventListener('DOMContentLoaded', function(),create variable var elem  outside the loop will prevent it from being created every time when the loop is executed,used document.getElementById() Web API call is faster, move the var movingPizzas = document.getElementById('movingPizzas1') outside the loop, reduce the number of pizza from 200 to 36  to fill the screen.
+4 added backface-visibility: hidden to css of .mover for  reducing the paint time.
 
 
 
