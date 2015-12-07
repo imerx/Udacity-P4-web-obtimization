@@ -446,16 +446,15 @@ var resizePizzas = function(size) {
 }
 //Iterates through pizza container  and changes their size
 function changePizzaSizes(size) {
-//use the API getElementsByClassName wich is faster and moved  outside the loop so can not be iterated  everytime
+//use the JS  API call getElementsByClassName wich is faster and moved , save the ramdom pizza container in a local variable outside the loop so can not be iterated.
 var container =  document.getElementsByClassName('randomPizzaContainer');
 var dx = determineDx(container[0], size);
 var newwidth = (container[0].offsetWidth + dx) + 'px';
 
-//
-for (i = 0; i < container.length; i++) {
+// obtimized the code  create  variable  len wich contain the length property
+for (var i = 0, len = container.length; i < len; i++) {
     container[i].style.width = newwidth;
-}
-
+  }
 }
 
   changePizzaSizes(size);
@@ -499,7 +498,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // credit to  http://jsperf.com/udacity-optimise-loop-test/2
 
-//move the  calculation out of loop
+//move the  calculation out of loop for better performance.
 function updatePositions() {
     frame++;
     window.performance.mark("mark_start_frame");
